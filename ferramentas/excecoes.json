@@ -1,0 +1,9 @@
+{
+ "auto.components.GitHubItemDialog.a18f669c7a": "Plural por sufixo colado: reação + \"s\" daria \"reaçãos\"; a variável do sufixo é omitida.",
+ "auto.components.GitLabItemDialog.40c56b95e2": "Plural por sufixo colado: aprovação + \"s\" daria \"aprovaçãos\"; a variável do sufixo é omitida.",
+ "auto.components.PullRequestPage.42c36d9166": "Plural por sufixo colado: reação + \"s\" daria \"reaçãos\"; a variável do sufixo é omitida.",
+ "auto.components.browser.pane.BrowserPane.a3508d7e6e": "Plural por sufixo colado: anotação + \"s\" daria \"anotaçãos\"; a variável do sufixo é omitida.",
+ "auto.components.feature.wall.ConnectIntegrationsList.list_end": "Separador antes do último item da lista: o português não usa vírgula antes do \"e\".",
+ "auto.components.shared.useDaemonActions.d18f3005c2": "Plural por sufixo colado: sessão + \"s\" daria \"sessãos\"; a variável do sufixo é omitida.",
+ "auto.components.shared.useDaemonActions.d6372cc797": "Plural por sufixo colado: sessão + \"s\" daria \"sessãos\"; a variável do sufixo é omitida."
+}

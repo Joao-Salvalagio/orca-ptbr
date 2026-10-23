@@ -1,0 +1,16 @@
+{
+  "manifestVersion": 1,
+  "id": "orca-ptbr",
+  "publisher": "joao-salvalagio",
+  "name": "Português do Brasil (completo)",
+  "version": "1.0.0",
+  "description": "Tradução completa da interface do Orca para o português do Brasil.",
+  "author": { "name": "Joao-Salvalagio", "url": "https://github.com/Joao-Salvalagio" },
+  "repository": "https://github.com/Joao-Salvalagio/orca-ptbr",
+  "engines": { "orca": ">=1.4.0" },
+  "pluginApi": 1,
+  "contributes": {
+    "languagePacks": [{ "locale": "pt-BR", "path": "locales/pt-BR.json" }]
+  },
+  "capabilities": []
+}
