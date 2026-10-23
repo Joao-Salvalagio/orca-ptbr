@@ -96,3 +96,9 @@ o prompt, a skill, a issue, a CLI, o shell, o hook, o log, o chat.
 - Item de menu citado entre aspas no texto: traduza também, do mesmo jeito que o item.
 - Palavras-chave de busca em minúsculas.
 - Atributos e código (`role=`, `aria-*`, comandos `gh …`) ficam intocados.
+- `sleep` (espaço de trabalho, agente) → `suspender` / `suspenso` / `suspensão de agentes`.
+- `team` → `equipe`; `handoff` → `handoff`; `sparse checkout` → `sparse checkout`; `preset` → `preset`.
+- `bell` (terminal) → `sino`; `Computer Use` e `Browser Use` ficam como nome de recurso; `build` → `a build`.
+- Plural colado na palavra (`session{{value1}}`, `{{value1}}` = "s"): se a palavra termina em -ão, reescreva sem a
+  variável do sufixo (`Sessões encerradas: {{value0}}.`) e registre a chave em `ferramentas/excecoes.json` com o motivo.
+- Lista com "and" no fim (`, and `): use ` e ` (sem vírgula), também registrado em `excecoes.json`.
