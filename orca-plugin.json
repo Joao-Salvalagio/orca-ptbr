@@ -3,7 +3,7 @@
   "id": "orca-ptbr",
   "publisher": "joao-salvalagio",
   "name": "Português do Brasil (completo)",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Tradução completa da interface do Orca para o português do Brasil.",
   "author": { "name": "Joao-Salvalagio", "url": "https://github.com/Joao-Salvalagio" },
   "repository": "https://github.com/Joao-Salvalagio/orca-ptbr",

@@ -75,9 +75,9 @@ function catalogoInglesEmbutido() {
     const m = codigo.match(/resources:\{en:\{translation:([A-Za-z_$][\w$]*)\}\}/);
     if (!m) continue;
     codigo = codigo.replace(/^import\{[^}]*\}from"[^"]+";/, 'var e=(f)=>f();')
-      .replace(/import\.meta\.url/g, '""')
+      .replace(/import\.meta\.url/g, '"file:///"')
       .replace(/export\{[^}]*\};?\s*$/, `__saida.en=${m[1]};`);
-    const caixa = { __saida: {}, console, setTimeout, clearTimeout, Intl };
+    const caixa = { __saida: {}, console, setTimeout, clearTimeout, Intl, URL, URLSearchParams };
     vm.runInNewContext(codigo, caixa);
     return achatar(caixa.__saida.en);
   }

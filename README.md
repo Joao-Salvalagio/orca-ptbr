@@ -4,7 +4,7 @@ Tradução completa da interface do [Orca](https://github.com/stablyai/orca) par
 como pacote de idioma (plugin `joao-salvalagio.orca-ptbr`, idioma `pt-BR`).
 
 O pacote oficial que vem com o Orca traduz só a navegação básica (22 textos). Este cobre o catálogo inteiro da
-versão indicada em [`fonte/versao.txt`](fonte/versao.txt): **16.342 de 16.542 textos (98,8%)** de configurações,
+versão indicada em [`fonte/versao.txt`](fonte/versao.txt): **16.761 de 16.961 textos (98,8%)** de configurações,
 barras laterais, editor, terminal, chat dos agentes, integrações (GitHub, GitLab, Linear, Jira), onboarding,
 menus e bandeja. O que faltar cai no inglês.
 
