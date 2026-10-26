@@ -103,5 +103,7 @@
  "auto.store.slices.store.test.helpers.b9a8117c33": "Terminal 1",
  "components.native-chat.composer.permissionFullAccessDescription": "Nunca pregunta antes de ediciones o comandos",
  "components.native-chat.composer.permissionFullAccessSharedDescription": "Nunca pregunta antes de ediciones o comandos",
+ "components.native-chat.resumeInNewChat.exitUnconfirmed": "{{agent}} ya está ejecutando esta conversación en otra terminal. Sal de {{agent}} allí o cierra esa terminal; luego abre esta conversación desde el Historial de sesiones.",
+ "components.native-chat.resumeInNewChat.exitUnconfirmedFromTerminal": "{{agent}} ya está ejecutando esta conversación en otra terminal. Sal de {{agent}} allí o cierra esa terminal; luego abre esta conversación desde el Historial de sesiones.",
  "components.workspace.cleanup.presentationFixtures.reviewAlphaCleanup": "Revisar la limpieza alfa"
 }

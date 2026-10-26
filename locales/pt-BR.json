@@ -1154,6 +1154,11 @@
       "da68d35f7b": "Abrir página com falha no navegador padrão",
       "db325a7eeb": "Não foi possível acessar {{value0}}",
       "deb5293610": "Anotações do navegador indisponíveis no runtime remoto",
+      "devToolsClose": "Fechar DevTools",
+      "devToolsDockBottom": "Acoplar embaixo",
+      "devToolsDockRight": "Acoplar à direita",
+      "devToolsTitle": "DevTools",
+      "devToolsUndock": "Abrir em janela separada",
       "e48569ac6d": "Não foi possível acessar este site.",
       "e72dfa268a": "anotar",
       "e7ca5a098c": "sucesso",
@@ -1303,6 +1308,7 @@
       "camera": "Usar sua câmera",
       "clipboard": "Ver textos e imagens copiados para a área de transferência",
       "idleDetection": "Saber quando você está usando este dispositivo",
+      "localNetwork": "Acessar apps neste dispositivo e dispositivos na sua rede local",
       "location": "Saber sua localização",
       "microphone": "Usar seu microfone",
       "midi": "Usar seus dispositivos MIDI",
@@ -1315,6 +1321,7 @@
       "camera": "Câmera",
       "clipboard": "Área de transferência",
       "idleDetection": "Uso do dispositivo",
+      "localNetwork": "Rede local",
       "location": "Localização",
       "microphone": "Microfone",
       "midi": "Dispositivos MIDI",
@@ -6475,6 +6482,17 @@
       "cce2cbd01d": "Escolher agente",
       "d91b0a189d": "Salvar receita"
      },
+     "ssh": {
+      "unrestored": {
+       "port": {
+        "row": {
+         "04adb5f5e7": "Não foi possível iniciar: {{value0}}",
+         "4c119f5e2a": "Ainda não iniciado",
+         "b817a96fcf": "Parado: {{value0}}"
+        }
+       }
+      }
+     },
      "use": {
       "source": {
        "control": {
@@ -9350,12 +9368,14 @@
       "confirmRestore": "Restaurar snapshot e reiniciar",
       "confirmStop": "Parar e remover servidor",
       "deferredVersion": "Atualização para {{version}} adiada.",
+      "forceUpdate": "Há terminais em execução neste host. Eles continuam rodando durante a atualização, e seus painéis se reconectam quando o servidor do Orca reiniciar.",
       "forget": "Esquecer…",
       "forgetDescription": "Desvincula este servidor daqui sem contatar o host. Se o host voltar, o servidor ainda pode estar rodando lá.",
       "keep": "Manter rodando",
       "keepLinked": "Manter vinculado",
       "keepState": "Manter estado",
       "migration": "Migração: {{phase}}",
+      "notNow": "Agora não",
       "notRunning": "Não está rodando",
       "orcaVersion": "Orca neste host: {{version}}",
       "recover": "Recuperar",
@@ -9365,6 +9385,7 @@
       "stop": "Parar…",
       "stopOrcaDescription": "Para o Orca no host SSH e o remove desta lista.",
       "update": "Atualizar",
+      "updateAnyway": "Atualizar mesmo assim",
       "updateOrcaOnHost": "Atualizar o Orca neste host"
      },
      "search": {
@@ -10225,6 +10246,7 @@
      "downloading": "Baixando…",
      "failed": "Falha na atualização",
      "legacyHelp": "As atualizações remotas não estão disponíveis para este servidor. Atualize o Orca no host do servidor.",
+     "managedOverSshHelp": "Este desktop atualiza este servidor por SSH. Use Atualizar na linha dele em Servidores Orca remotos.",
      "manual": "Atualização manual",
      "offline": "Offline",
      "queued": "Na fila",
@@ -15494,10 +15516,6 @@
       "cabdc2a9e0": "Não foi possível ler as credenciais de login do Claude.",
       "cedb7b99e3": "% usado",
       "claude": {
-       "expired": {
-        "label": "Login expirado",
-        "message": "O uso do Claude expirou. Inicie o Claude nesta conta para atualizá-lo."
-       },
        "waiting": {
         "label": "Atualiza quando o Claude roda",
         "message": "O uso do Claude é atualizado na próxima vez que o Claude rodar."
@@ -17454,6 +17472,11 @@
      }
     }
    },
+   "composerCreateHandoff": {
+    "needsInput": "O worktree não foi criado porque precisa de mais informações.",
+    "preparationTimedOut": "A preparação do worktree expirou.",
+    "reopen": "Reabrir"
+   },
    "dropSkipReason": {
     "missing": "Não está mais no caminho original.",
     "permissionDenied": "Permissão negada.",
@@ -18265,6 +18288,9 @@
    "title": "A identidade do navegador agora vale para todo o app"
   }
  },
+ "browserTab": {
+  "agentDriving": "Um agente está usando esta página"
+ },
  "checksPanel": {
   "unlinked": {
    "description": "O PR #{{number}} está oculto neste espaço de trabalho. Vincule-o de novo para restaurar as verificações e os detalhes da revisão.",
@@ -18687,6 +18713,8 @@
     "compactionFailed": "A compactação falhou.",
     "compactionFailedQuoted": "A compactação falhou: {{detail}}.",
     "compactionUnconfirmed": "A conclusão da compactação não foi confirmada.",
+    "conversationOpenElsewhere": "O Codex ainda mantém esta conversa aberta. Tente de novo em instantes ou feche os outros terminais do Codex.",
+    "conversationOpenInTerminal": "{{agent}} já está executando esta conversa em outro terminal. Saia de {{agent}} lá ou feche esse terminal para continuar aqui.",
     "couldNotRestart": "Não foi possível reiniciar o {{agent}}.",
     "couldNotStart": "Não foi possível iniciar o {{agent}}.",
     "couldNotStop": "Não foi possível parar o {{agent}}.",
@@ -18909,8 +18937,8 @@
    },
    "resumeInNewChat": {
     "cannotResume": "Esta conversa do {{agent}} não pode ser retomada em um chat nativo.",
-    "exitUnconfirmed": "O Orca não consegue confirmar que {{agent}} saiu no terminal dele. Pare o que está rodando lá ou feche o terminal e tente de novo.",
-    "exitUnconfirmedFromTerminal": "O Orca não consegue confirmar que {{agent}} saiu no terminal dele. Pare o que está rodando lá ou feche o terminal e depois abra esta conversa pelo Histórico de sessões.",
+    "exitUnconfirmed": "{{agent}} já está executando esta conversa em outro terminal. Saia de {{agent}} lá ou feche esse terminal; depois abra esta conversa pelo Histórico de sessões.",
+    "exitUnconfirmedFromTerminal": "{{agent}} já está executando esta conversa em outro terminal. Saia de {{agent}} lá ou feche esse terminal; depois abra esta conversa pelo Histórico de sessões.",
     "notSavedYet": "O {{agent}} ainda não salvou esta conversa. Tente de novo depois que ele responder."
    },
    "rewind": {
@@ -19064,6 +19092,8 @@
     },
     "runAgentMany": "Executou {{value0}} agentes",
     "runAgentOne": "Executou 1 agente",
+    "runBrowserMany": "Usou o navegador {{value0}} vezes",
+    "runBrowserOne": "Usou o navegador",
     "runCommandMany": "Executou {{value0}} comandos",
     "runCommandOne": "Executou 1 comando",
     "runFileChangeMany": "Editou {{value0}} arquivos",
@@ -19075,6 +19105,8 @@
     "runListFilesOne": "Listou 1 diretório",
     "runLiveAgentMany": "Executando {{value0}} agentes",
     "runLiveAgentOne": "Executando 1 agente",
+    "runLiveBrowserMany": "Usando o navegador {{value0}} vezes",
+    "runLiveBrowserOne": "Usando o navegador",
     "runLiveCommandMany": "Executando {{value0}} comandos",
     "runLiveCommandOne": "Executando 1 comando",
     "runLiveFileChangeMany": "Editando {{value0}} arquivos",
@@ -19109,6 +19141,8 @@
     "runToolOne": "Usou 1 ferramenta",
     "runWebSearchMany": "Pesquisou na web {{value0}} vezes",
     "runWebSearchOne": "Pesquisou na web 1 vez",
+    "showBrowserPage": "Mostrar",
+    "showBrowserPageLabel": "Mostrar {{value0}}",
     "showFullOutput": "Mostrar saída completa",
     "usedManySummary": "Usou {{toolCount}} ferramentas",
     "usedOneSummary": "Usou 1 ferramenta"
@@ -19162,7 +19196,6 @@
     "notAvailable": "Isto não está disponível neste chat.",
     "notDoneAnswer": "Sua resposta não foi enviada.",
     "notDoneCommand": "O comando não foi executado.",
-    "notDoneGoal": "O goal não foi alterado.",
     "notDoneOption": "A configuração não foi alterada.",
     "notDoneQueuedEdit": "Sua edição não foi salva.",
     "notDoneReadHistory": "Não foi possível carregar o histórico deste chat.",
@@ -19304,7 +19337,9 @@
   "tab": {
    "bar": {
     "BrowserTab": {
-     "closeOthers": "Fechar outras"
+     "closeOthers": "Fechar outras",
+     "muteTab": "Silenciar aba",
+     "unmuteTab": "Reativar som da aba"
     },
     "bulkClose": {
      "confirm": "Fechar abas",
@@ -19313,6 +19348,10 @@
      "left": "Fechar as abas à esquerda?",
      "others": "Fechar as outras abas?",
      "right": "Fechar as abas à direita?"
+    },
+    "chatRename": {
+     "empty": "O nome do chat não pode ficar vazio",
+     "failed": "Não foi possível renomear este chat"
     },
     "CopyTabIdMenuItem": {
      "copied": "ID da aba copiado",
@@ -19982,6 +20021,7 @@
   "showStatusBar": "Mostrar barra de status",
   "showTasksButton": "Mostrar botão de tarefas",
   "showTitlebarAppName": "Mostrar nome do app na barra de título",
+  "toggleDevTools": "Alternar ferramentas do desenvolvedor",
   "toggleLeftSidebar": "Alternar barra lateral esquerda",
   "toggleRightSidebar": "Alternar barra lateral direita",
   "view": "Visualização",
@@ -20277,7 +20317,12 @@
     "comfortable": "Confortável",
     "contrast": "Contraste",
     "contrastDescription": "O brilho do texto do chat em relação ao fundo. A extremidade direita corresponde ao visual mais antigo e mais brilhante.",
+    "fontFamily": "Família da fonte",
+    "fontFamilyDescription": "Fonte usada nas mensagens, na atividade e na caixa de mensagem.",
+    "fontPreview": "A rápida raposa marrom pula sobre o cão preguiçoso.",
+    "fontPreviewLabel": "Prévia da fonte do chat",
     "full": "Total",
+    "inheritFont": "Igual à fonte da IDE",
     "matchTerminalInterface": "Seguir a interface do terminal",
     "matchTerminalInterfaceDescription": "Usa a fonte e as cores da interface do seu terminal em todo o chat. Permanece sincronizado se você mudar o tema do terminal depois.",
     "pixels": "px",
@@ -20371,6 +20416,7 @@
     "search": {
      "camera": "câmera",
      "clipboard": "área de transferência",
+     "localNetwork": "rede local",
      "location": "localização",
      "microphone": "microfone",
      "notifications": "notificações",
@@ -20421,6 +20467,7 @@
     "searchTemplate": "modelo de comando",
     "title": "Nomes de chats"
    },
+   "permissionsAgentsLink": "Configurações → Agentes",
    "permissionsDescription": "Só para novos chats. Os padrões de cada agente ficam em Configurações → Agentes.",
    "permissionsTitle": "Permissões para novos chats",
    "providers": {
