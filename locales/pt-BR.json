@@ -67,6 +67,9 @@
     "busy": "Trabalhando",
     "dontAskAgain": "Não perguntar de novo (reiniciar automaticamente)",
     "dontAskAgainHint": "Você pode desativar isso em Configurações → Contas de provedores de IA.",
+    "groupCantMove": "Não podem ser movidas",
+    "groupElsewhere": "Fora de {{account}}",
+    "groupOnAccount": "Em execução em {{account}}",
     "idle": "Ocioso",
     "keep": "Manter como está",
     "keyword": {
@@ -74,14 +77,20 @@
      "running": "rodando"
     },
     "listLabel": "Sessões do Claude para reiniciar",
+    "notMovedOne": "1 outra sessão não foi movida.",
+    "notMovedOther": "{{count}} outras sessões não foram movidas.",
+    "reasonNoSession": "Não pode ser retomada",
+    "reasonOwnFolder": "Usa a sua própria pasta do Claude",
+    "reasonUnknownAccount": "Conta desconhecida",
+    "reasonWsl": "Terminal WSL",
     "restartingOne": "Reiniciando 1 sessão do Claude em {{account}}",
     "restartingOther": "Reiniciando {{count}} sessões do Claude em {{account}}",
     "restartOne": "Reiniciar sessão",
     "restartOther": "Reiniciar {{count}} sessões",
-    "selectAll": "Selecionar tudo",
-    "selectAllSessions": "Selecionar todas as sessões",
-    "selectedCount": "{{selected}} de {{total}} selecionadas",
-    "selectWorkspace": "Selecionar todas as sessões em {{workspace}}",
+    "review": "Revisar",
+    "reviewBodyOne": "1 outra sessão do Claude não foi movida para {{next}}.",
+    "reviewBodyOther": "{{count}} outras sessões do Claude não foram movidas para {{next}}.",
+    "selectGroup": "Selecionar todas as sessões em {{group}}",
     "session": "Sessão do Claude",
     "settingAsk": "Perguntar",
     "settingDescription": "Reiniciar continua cada conversa em andamento na nova conta.",
@@ -3301,7 +3310,6 @@
     "00ccdf9b5a": "Status",
     "00f55cc17b": "O acesso ao repositório não está disponível para este pull request.",
     "038b3d39b1": "Copiado",
-    "03d7216d62": "{{value0}} PR #{{value1}}?",
     "03e542fcfe": "Falha ao iniciar um agente de IA para as verificações com problema: {{value0}}",
     "04539beb48": "issue",
     "06482d6190": "Não foi possível criar um espaço de trabalho de correção automaticamente.",
@@ -4726,6 +4734,16 @@
     "pendingChip": "{{value0}} pendentes",
     "unresolvedChip": "{{value0}} não resolvidos"
    },
+   "PullRequestConfirmation": {
+    "closeTitle": "Fechar o PR #{{number}}?",
+    "mergeLabel": "Criar commit de merge",
+    "mergeTitle": "Fazer merge do PR #{{number}} com um commit de merge?",
+    "rebaseLabel": "Fazer rebase e merge",
+    "rebaseTitle": "Fazer rebase e merge do PR #{{number}}?",
+    "reopenTitle": "Reabrir o PR #{{number}}?",
+    "squashLabel": "Fazer squash e merge",
+    "squashTitle": "Fazer squash e merge do PR #{{number}}?"
+   },
    "PullRequestPage": {
     "2560588245": "Falha ao solicitar o revisor",
     "3450247584": "Comentário",
@@ -4894,7 +4912,6 @@
     "e6996f4024": "· atualizado",
     "eb722a5a8c": "Expandir tudo",
     "eca289e593": "O merge exige um repositório local registrado",
-    "eec3706a6a": "{{value0}} PR #{{value1}}?",
     "eff839f438": "Comentário de revisão adicionado.",
     "f01bf79a79": "verificação #",
     "f119e5f5ef": "Responder",
@@ -5008,6 +5025,7 @@
       "resumeInNewCliUnavailable": "Esta sessão não pode ser aberta na CLI.",
       "resumePastSessions": "Retomar sessões anteriores",
       "searchSessions": "Buscar sessões",
+      "sessionDeleteCheckingHost": "Verificando {{value0}}…",
       "sessionDeleted": "Sessão excluída",
       "sessionDeleteFailed": "Não foi possível excluir a sessão",
       "sessionHistory": "Histórico de sessões do agente",
@@ -5069,6 +5087,7 @@
      "AiVaultSessionDeleteDialog": {
       "confirm": "Excluir",
       "description": "A sessão \"{{value0}}\" será excluída. Depois de excluída, ela também não poderá mais ser retomada pela linha de comando do próprio {{value1}}.",
+      "remoteDescription": "\"{{value0}}\" será excluída de {{value2}}. Depois de excluída, ela também não poderá mais ser retomada pela linha de comando do próprio {{value1}}.",
       "title": "Excluir esta sessão?"
      },
      "AiVaultSessionDetails": {
@@ -5161,6 +5180,7 @@
       "copyResumeCommand": "Copiar comando de retomada",
       "copySessionId": "Copiar ID da sessão",
       "delete": "Excluir",
+      "deleteReasonHostUpdateRequired": "Atualize {{value0}} para excluir as sessões dele daqui.",
       "deleteReasonNonLocalHost": "Só é possível excluir sessões deste dispositivo.",
       "deleteReasonSyntheticPath": "Esta sessão não pode ser excluída pelo Orca.",
       "deleteReasonUnsupportedAgent": "Sessões do {{value0}} não podem ser excluídas pelo Orca.",
@@ -11634,7 +11654,9 @@
      "f2331ce599": "Editar alvo SSH",
      "f42d844544": "ex.: cloudflared access ssh --hostname %h",
      "fea9cb402e": "Cancelar",
-     "feae1d1e69": "Opcional. Equivale a ProxyJump / ssh -J."
+     "feae1d1e69": "Opcional. Equivale a ProxyJump / ssh -J.",
+     "reconnectOnLaunch": "Reconectar ao iniciar",
+     "reconnectOnLaunchHelp": "Quando desativado, o Orca deixa este host, e qualquer servidor do Orca acessado por ele, desconectado ao iniciar até você conectá-lo."
     },
     "SshTargetList": {
      "addedInOrca": "Adicionados no Orca",
@@ -13362,7 +13384,9 @@
      "51001182e3": "Diretório vazio",
      "971d85cc84": "Abre como projeto neste host · {{value0}}",
      "9e060f5815": "Selecionar pasta",
+     "entriesLabel": "Itens da pasta",
      "f8b1deb1a4": "Cancelar",
+     "inputLabel": "Filtro ou caminho",
      "largeInputNoMatches": "Nenhum resultado para esta entrada longa"
     },
     "RemoveFolderDialog": {
@@ -14077,18 +14101,18 @@
      "bd0e8159f8": "Verifique o comando do editor ou a configuração do gerenciador de arquivos nesta máquina.",
      "f387af445b": "O caminho do espaço de trabalho não é um caminho local válido.",
      "localOnly": "Somente local",
-     "remoteEditorHint": "Só o VS Code consegue abrir pastas num host SSH.",
+     "remoteEditorHint": "Só o VS Code, o Cursor e o Zed podem abrir pastas em um host SSH.",
      "remoteEditorUnsupported": "Este app não consegue abrir espaços de trabalho SSH.",
-     "remoteEditorUnsupportedDetail": "Escolha o VS Code ou use o app localmente.",
-     "remoteLaunchFailed": "Não foi possível abrir o caminho no VS Code.",
-     "remoteLaunchFailedDetail": "Verifique o comando do VS Code configurado nesta máquina.",
+     "remoteEditorUnsupportedDetail": "Escolha o VS Code, o Cursor ou o Zed, ou use o app localmente.",
+     "remoteLaunchFailed": "Não foi possível abrir o caminho no editor.",
+     "remoteLaunchFailedDetail": "Confira o comando do editor configurado nesta máquina.",
      "remotePathInvalid": "O caminho não é válido para o host SSH.",
      "remotePathInvalidDetail": "Atualize o espaço de trabalho antes de tentar de novo.",
      "remoteRuntimeEditorHint": "Aplicativos deste computador só conseguem abrir os arquivos deste servidor quando o Orca o acessa por SSH.",
      "remoteRuntimeUnsupported": "Abrir este caminho em um app local não está disponível.",
      "remoteRuntimeUnsupportedDetail": "Mude para um espaço de trabalho local ou SSH e tente de novo.",
      "remoteSsh": "SSH remoto",
-     "sshAliasRequired": "O VS Code precisa de um alias na configuração SSH para este host.",
+     "sshAliasRequired": "Este editor precisa de um alias da configuração SSH para este host.",
      "sshAliasRequiredDetail": "Adicione um alias Host para {{host}}:{{port}} à sua configuração SSH local, reconecte o espaço de trabalho e tente de novo.",
      "sshTargetInvalid": "A configuração do host SSH está incompleta.",
      "sshTargetInvalidDetail": "Edite ou reconecte o host SSH e tente de novo.",
@@ -15278,6 +15302,7 @@
       },
       "memory": {
        "metric": {
+        "footprintDescription": "Uso de memória somado, o mesmo valor que o Monitor de Atividade mostra: a memória que cada processo possui, incluindo a memória gráfica. Páginas compartilhadas entre processos não são contadas duas vezes.",
         "privateBytesDescription": "Soma dos bytes privados: memória que esses processos comprometeram, esteja residente ou paginada. É o que o host contabiliza no limite de commit, então continua subindo enquanto o working set acima diminui com a paginação.",
         "rssDescription": "Soma do resident set size (RSS). Páginas compartilhadas ou com alias podem aparecer em mais de um processo.",
         "workingSetDescription": "Soma do working set (WS): páginas residentes na RAM neste momento. Páginas compartilhadas podem aparecer em mais de um processo, e a memória que o Windows paginou não é contada aqui."
@@ -16202,7 +16227,6 @@
     "837bb901ec": "Revisores removidos",
     "8396825a14": "Ação",
     "83bce6be5c": "Conectar Jira",
-    "844dc193c7": "{{value0}} PR #{{value1}}?",
     "851017590d": "Adicionar acesso ao Linear",
     "8675cd6188": "Linear",
     "887efe9140": "Conectar",
@@ -18586,7 +18610,6 @@
     "permissionAcceptEditsAntigravityDescription": "Aprova edições de arquivos; pergunta sobre o resto",
     "permissionAcceptEditsDescription": "Aprova edições de arquivos e comandos de arquivos; pergunta sobre o resto",
     "permissionAsk": "Pedir aprovação",
-    "permissionAskCodexDescription": "Edita arquivos e executa comandos neste espaço de trabalho; pergunta antes de qualquer outra coisa",
     "permissionAskDescription": "Pergunta antes de edições e comandos que suas configurações não permitem",
     "permissionAskSharedDescription": "Pergunta antes de edições ou comandos que ainda não tem permissão para fazer",
     "permissionAuto": "Aprovar por mim",
@@ -18721,6 +18744,7 @@
     "couldNotStopTheAgent": "Não foi possível parar o agente.",
     "editSavedArguments": "Edite-os em Configurações > Agentes > Argumentos.",
     "emptyMessage": "Esta mensagem está vazia, então não foi enviada.",
+    "fullAccessAsRoot": "O {{agent}} não usa Acesso total quando roda como root. Escolha outra permissão para o {{agent}} em Configurações → Agentes no computador que roda este chat e inicie um novo chat.",
     "historyInOtherAccount": "O histórico deste chat está em outra conta do Claude. Volte para essa conta para continuá-lo.",
     "historyTooLarge": "O histórico desta conversa é grande demais para ser restaurado aqui.",
     "hostFault": "O Orca teve um problema, então isso não foi concluído.",
@@ -18803,6 +18827,12 @@
     "sentAsGoal": "Enviada como meta",
     "set": "Meta definida"
    },
+   "goalControl": {
+    "pauseUnconfirmed": "O Codex parou de rodar, mas a pausa da meta não foi confirmada. Confira a meta antes de continuar.",
+    "settingsRejected": "O Codex não conseguiu aplicar o modelo e o esforço selecionados. Esta mudança de meta não foi enviada. Confira a seleção e tente de novo.",
+    "settingsUnconfirmed": "O Codex não confirmou o modelo e o esforço selecionados. Esta mudança de meta não foi enviada. Confira o chat e tente de novo.",
+    "stopUnconfirmed": "O Codex não conseguiu confirmar o Parar. Confira o chat antes de continuar."
+   },
    "hostOutage": {
     "offline": "{{hostName}} está offline",
     "reconnect": "Reconectar",
@@ -18826,8 +18856,7 @@
     "continue": "Continuar",
     "explanation": "Ao continuar, o agente primeiro verifica se o último passo foi concluído.",
     "failed": "Não foi possível continuar este chat. Tente de novo ou envie uma mensagem.",
-    "unconfirmed": "Não foi possível confirmar se o {{agent}} recebeu o Continuar. Confira o chat antes de tentar de novo.",
-    "usageLimitExplanation": "Pede ao agente que continue de onde parou. Use depois que o limite for redefinido."
+    "unconfirmed": "Não foi possível confirmar se o {{agent}} recebeu o Continuar. Confira o chat antes de tentar de novo."
    },
    "jumpToLatest": "Ir para o mais recente",
    "launchPromptNotDelivered": "Não entregue — confira o terminal",
@@ -18939,6 +18968,7 @@
     "cannotResume": "Esta conversa do {{agent}} não pode ser retomada em um chat nativo.",
     "exitUnconfirmed": "{{agent}} já está executando esta conversa em outro terminal. Saia de {{agent}} lá ou feche esse terminal; depois abra esta conversa pelo Histórico de sessões.",
     "exitUnconfirmedFromTerminal": "{{agent}} já está executando esta conversa em outro terminal. Saia de {{agent}} lá ou feche esse terminal; depois abra esta conversa pelo Histórico de sessões.",
+    "hostUpdateRequired": "Atualize o Orca neste host para continuar na Interface de chat.",
     "notSavedYet": "O {{agent}} ainda não salvou esta conversa. Tente de novo depois que ele responder."
    },
    "rewind": {
